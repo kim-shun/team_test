@@ -13,11 +13,11 @@
 
 num = []
 sum = 0
-n = 0
+count = 0
 while sum < 7
-  n += 1
-  a = 1.0/n
-  num << a
+  count += 1
+  reciprocal = 1.0/count
+  num << reciprocal
   sum = num.sum
 end
 puts num.length
