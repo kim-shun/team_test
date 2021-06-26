@@ -9,12 +9,18 @@
 #   end
 # end
 
-n = 1
-num = 0
-while n <= 40
-  num += n**4
-  if n == 40
-    puts num
+count = 1
+sum = 0
+while count <= 40
+  sum += count**4
+  if count == 40
+    puts sum
   end
-  n += 1
+  count += 1
 end
+
+# num = 0
+# 40.times do |i|
+#   num += (i+1)**4
+#   puts num
+# end
