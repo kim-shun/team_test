@@ -1,11 +1,11 @@
 
-# num = 0
+# sum = 0
 # 10000.times do |timesCount|
-#   n = timesCount + 1
-#   num += 1.0/n
-#   if num >= 7
-#    puts num
-#    puts n
+#   count = timesCount + 1
+#   sum += 1.0/count
+#   if sum >= 7
+#    puts sum
+#    puts count
 #    return
 #   end
 # end
@@ -22,6 +22,11 @@ while sum < 7
 end
 puts num.length
 
+# num = 0
+# 20.times do |i|
+#   num += 1.0/(i + 1)
+#   puts num
+# end
 
 
 
