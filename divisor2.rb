@@ -39,3 +39,33 @@ puts "和を出したい約数の範囲を指定してください"
 range = gets.to_i
 divisor(num,range)
 
+# def divisor(num)
+#   divisible = []
+#   divisible_1000 = []
+#   count = 1
+#   while count <= num
+#     divisible_or = num % count
+#     if divisible_or == 0
+#        divisible << count
+#        if count <= 1000
+#         divisible_1000 << count
+#        end
+#     end
+#     count += 1
+#   end
+#   puts divisible.sum
+#   puts divisible_1000.sum
+# end
+
+# puts "整数を入力してください"
+# num = gets.to_i
+# divisor(num)
+
+# 45.times do |count|
+#   count += 1
+#   if 45 % count == 0
+#     puts count
+#   end
+# end
+
+
