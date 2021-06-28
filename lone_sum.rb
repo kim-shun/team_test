@@ -43,7 +43,7 @@
 # end
 
 # lone_sum([1, 2, 3])
-#↑実行結果：123123123
+# ↑実行結果：123123123
 
 
 
@@ -116,3 +116,19 @@ end
 lone_sum([1, 2, 3]) #→ 6
 lone_sum([3, 2, 3]) #→ 2
 lone_sum([3, 3, 3]) #→ 0
+
+
+
+
+
+# def lone_sum(ary)
+#   ary.each do |num|
+#     ary.each do |i|
+#       puts num
+#       puts i
+#     end
+#   end
+# end
+
+# lone_sum([1, 2, 3])
+#↑実行結果：11 12 13 21 22 23 31 32 33
