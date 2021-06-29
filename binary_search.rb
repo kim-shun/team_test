@@ -1,29 +1,28 @@
-def binary_search(input, array)
-  last = array.length - 1
-  count = 0
-  while count <= last
-    if input == array[count]
-      return count
-    end
-    count += 1
-  end
-  return -1
-end
+# def binary_search(input, array)
+#   last = array.length - 1
+#   count = 0
+#   while count <= last
+#     if input == array[count]
+#       return count
+#     end
+#     count += 1
+#   end
+#   return -1
+# end
 
-array=[1,3,5,6,9,10,13,20,26,31]
-puts "検索したい数字を入力してください"
-input = gets.to_i
-result = binary_search(input, array)
+# array=[1,3,5,6,9,10,13,20,26,31]
+# puts "検索したい数字を入力してください"
+# input = gets.to_i
+# result = binary_search(input, array)
 
-if result == -1
-  puts "#{input}は配列内に存在しません"
-else
-  puts "#{array[result]}は#{result}番目にあります"
-end
-
-
+# if result == -1
+#   puts "#{input}は配列内に存在しません"
+# else
+#   puts "#{array[result]}は#{result}番目にあります"
+# end
 
 
+each_with_index
 
 
 
