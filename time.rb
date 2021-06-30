@@ -2,9 +2,10 @@ def time_hour(hour)
   minutes = hour * 60.0
   seconds = minutes * 60.0
   day = hour / 24.0
+  day_r = Rational(hour, 24.0) 
   puts "#{hour}時間は#{minutes}分です"
   puts "#{hour}時間は#{seconds}秒です"
-  puts "#{hour}時間は#{day}日です"
+  puts "#{hour}時間は#{day}日(#{day_r}日)です"
 end
 
 puts "時間を入力してください"
