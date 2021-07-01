@@ -25,15 +25,29 @@ days = get_days(2021,8)
 days = get_days(2021,6)
 
 
-# puts "年を入力してください："
-# year = gets.to_i
-# puts "月を入力してください："
-# month = gets.to_i
+def get_days(year, month)
+  month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+  if month == 2
+    if year % 4 == 0
+      if year % 100 == 0 && year % 400 != 0
+        days = 28
+      else
+        days = 29
+      end
+    else
+      days = 28
+    end
+  else
+    days = month_days[month - 1]
+  end
 
-# days = get_days(year, month)
-# puts "#{year}年#{month}月は#{days}日間あります"
+  return days
+end
 
-# 1990年2月 =>"1990年2月は28日間あります"
-# 2000年2月 =>"2000年2月は29日間あります"
-# 2100年2月 =>"2100年2月は28日間あります"
-# 2000年3月=>"2000年3月は31日間あります"
+puts "年を入力してください："
+year = gets.to_i
+puts "月を入力してください："
+month = gets.to_i
+
+days = get_days(year, month)
+puts "#{year}年#{month}月は#{days}日間あります"
