@@ -1,7 +1,7 @@
 #1日1万歩歩いているかどうかを判定する
 def walking(d,s)
   d_cm = (d * 1000) * 100
-  steps = d_cm / s
+  steps = d_cm / s rescue 0
   if (d >= 0 && d <= 20) && (s >= 30 && s <= 100)
     if steps >= 10000
       puts "yes"
