@@ -12,14 +12,26 @@ first_day = Date.new(year, month, 1)
 last_day = Date.new(year, month, -1)
 
 count = 0
-(first_day.day..last_day.day).each{|day| 
+(first_day.day..last_day.day).each{|day|
   count += 1
   if count <= 7
-    print day
+    print "#{day}  "
   elsif count == 8
-    print "\n#{day}"
+    print "\n#{day}  "
+  elsif count <= 14
+    print "#{day} "
+  elsif count == 15
+    print "\n#{day} "
+  elsif count <= 21
+    print "#{day} "
+  elsif count == 22
+    print "\n#{day} "
+  elsif count <= 28
+    print "#{day} "
+  elsif count == 29
+    print "\n#{day} "
   else
-    print day
+    print "#{day} "
   end
 }
 
