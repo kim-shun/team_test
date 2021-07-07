@@ -1,6 +1,6 @@
 require "date"
 
-puts "#{Date.today.strftime('%B')} #{Date.today.strftime('%Y')}"
+puts Date.today.strftime('%B' '%Y')
 
 puts Date.today.strftime('%a')
 year = Date.today.year
