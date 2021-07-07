@@ -11,9 +11,19 @@ month = Date.today.month
 first_day = Date.new(year, month, 1)
 last_day = Date.new(year, month, -1)
 
+count = 0
 (first_day.day..last_day.day).each{|day| 
-  print day
+  count += 1
+  if count <= 7
+    print day
+  elsif count == 8
+    print "\n#{day}"
+  else
+    print day
+  end
 }
+
+
 
 
 
