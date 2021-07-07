@@ -1,0 +1,5 @@
+puts "SAMPLE1\nSAMPLE2"
+# 出力結果
+# SAMPLE1
+# SAMPLE2
+

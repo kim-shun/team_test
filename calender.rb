@@ -11,10 +11,8 @@ month = Date.today.month
 first_day = Date.new(year, month, 1)
 last_day = Date.new(year, month, -1)
 
-days = []
-
 (first_day.day..last_day.day).each{|day| 
-  puts day.to_s.rjust(2)
+  print day
 }
 
 
