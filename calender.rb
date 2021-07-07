@@ -2,26 +2,9 @@ require "date"
 
 puts Date.today.strftime('%B' '%Y')
 
-puts Date.today.strftime('%a')
-year = Date.today.year
-mon = Date.today.mon
-puts year
-puts mon
+
 days = ["Su","Mo","Tu","We","Th","Fr","Sa"]
-first = Date.new(year,mon,1).wday
-last = Date.new(year,mon,-1).day
-puts first
-puts last
 
-a = Date.new
-30.times do 
-  b = a.strftime('%e')
-  p b.ljust(7)
-  a += 1
-end
-
-s = "Ruby"
- p s.center(10) 
 
 
 # 出力例
