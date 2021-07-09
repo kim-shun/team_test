@@ -1,4 +1,5 @@
-# puts "  B |  I |  N |  G |  O"
+puts "  B |  I |  N |  G |  O"
+
 
 # def rand_b
 #   b = rand(1..15)
@@ -42,14 +43,22 @@
 #   puts "\n"
 # end
 
-5.times do
-  print rand(1..15)
-  print rand(16..30)
-  print rand(31..45)
-  print rand(46..60)
-  print rand(1..75)
-  puts "\n"
-end
+# 5.times do
+#   print rand(1..15)
+#   print rand(16..30)
+#   print rand(31..45)
+#   print rand(46..60)
+#   print rand(1..75)
+#   puts "\n"
+# end
+
+# bingo = (1..75).each_slice(15).map{|range| range.sample(5)}.transpose
+# bingo[2][2] = ""
+
+# puts "  B |  I |  N |  G |  O"
+# bingo.map do |row|
+#   puts row.map{|number| number.to_s.rjust(3)}.join(" |")
+# end
 
 #回答例
 # class Bingo

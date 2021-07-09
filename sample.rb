@@ -1,37 +1,15 @@
-# def sample(input)
-#   #ten_rank = input / 10
-#   ten_rank = (input / 10) % 10
-#   one_rank = input % 10
-#   addition = ten_rank + one_rank
-#   multiplication = ten_rank * one_rank
-#   addmulti = addition + multiplication
-#   puts "足し算と掛け算の合計結果は#{addmulti}です"
-# end
+array = [2,3,4,5,7,8,9]
+puts array.sample #9
+print array.sample(4) #[3, 9, 7, 5]
+puts "\n"
+puts array.sample(4)
+# 5
+# 8
+# 3
+# 2
 
-# puts "二桁以上の整数を入力してください"
-# input = gets.to_i
-# sample(input)
+p array.sample #9
+p array.sample(4) #[3, 9, 7, 5]
 
-
-def addition(a, b)
-  a + b
-end
-
-def multiplication(a,b)
-  a * b
-end
-
-def slice_num(num)
-  # 10の位
-  tens_place = (num / 10) % 10
-  # 1の位
-  ones_place = num % 10
-  return tens_place, ones_place
-end
-
-puts "二桁の整数を入力してください"
-input = gets.to_i
-X, Y = slice_num(input)
-add_result = addition(X, Y)
-multiple_result = multiplication(X, Y)
-puts "足し算結果と掛け算結果の合計値は#{add_result + multiple_result}です"
+b = (1..15).to_a #配列にする
+print b.sample(4) #[4, 12, 8, 9]
