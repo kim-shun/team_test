@@ -1,5 +1,28 @@
 puts "  B |  I |  N |  G |  O"
 
+b = (1..15).to_a.sample(5)
+i = (16..30).to_a.sample(5)
+n = (31..45).to_a.sample(5)
+g = (46..60).to_a.sample(5)
+o = (61..75).to_a.sample(5)
+
+5.times do |count|
+  if b[count] <= 9
+    print "  #{b[count]} |"
+  else
+    print " #{b[count]} |"
+  end
+  print " #{i[count]} |"
+  if count == 2
+    print "    |"
+  else
+    print " #{n[count]} |"
+  end
+  print " #{g[count]} |"
+  print " #{o[count]}  "
+  puts "\n"
+end
+
 
 # def rand_b
 #   b = rand(1..15)
