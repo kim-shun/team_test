@@ -12,11 +12,7 @@ blank = "   " * wday_first
 puts "Su Mo Tu We Th Fr Sa"
 print blank
 (first_day.day..last_day.day).each{ |day|
-  if day <= 9
-    print " #{day} "
-  else
-    print "#{day} "
-  end
+  printf("%2d ", day)
 
   if (wday_first + day) % 7 == 0
     puts "\n"
