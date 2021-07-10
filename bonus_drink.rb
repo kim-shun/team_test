@@ -1,10 +1,27 @@
+# def can_drink(purchase)
+#   count = 1
+#   while count <= purchase
+#     if count % 3 == 0
+#       purchase += 1
+#     end
+#     count += 1
+#   end
+#   puts "トータルで#{purchase}本飲めます"
+# end
+
+# puts "飲み物を何本購入しましたか？"
+# purchase = gets.to_i
+# can_drink(purchase)
+
+
+#ループ処理をやめる
+
 def can_drink(purchase)
-  count = 1
-  while count <= purchase
-    if count % 3 == 0
-      purchase += 1
-    end
-    count += 1
+  bottles = purchase
+  while bottles >= 3
+    bonus = bottles / 3
+    purchase += bonus
+    bottles = bottles % 3 + bonus
   end
   puts "トータルで#{purchase}本飲めます"
 end
@@ -12,6 +29,8 @@ end
 puts "飲み物を何本購入しましたか？"
 purchase = gets.to_i
 can_drink(purchase)
+
+
 
 #解答例
 # def count_additional_bottle(n)             # 空き瓶の本数を受け取って追加で飲める本数を返す
