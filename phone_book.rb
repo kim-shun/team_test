@@ -1,4 +1,15 @@
 # def phone_book(names)
+# end
+
+# names = ['キシモト', 'イトウ', 'ババ', 'カネダ', 'ワダ', 'ハマダ']
+# phone_book(names)
+
+# names = ['フクダ', 'キムラ', 'タナカ', 'ハシモト', 'オカモト', 'ゴトウ']
+# phone_book(names)
+
+
+
+# def phone_book(names)
   # a = ("ア".."オ").to_a
   # ka = ("カ".."ゴ").to_a
   # sa = ("サ".."ゾ").to_a
@@ -29,60 +40,99 @@
 #   end
 # end
 
-# def phone_book(names)
-#   a = ("ア".."オ").to_a
-#   ka = ("カ".."ゴ").to_a
-#   sa = ("サ".."ゾ").to_a
-#   ta = ("タ".."ド").to_a
-#   na = ("ナ".."ノ").to_a
-#   ha = ("ハ".."ポ").to_a
-#   ma = ("マ".."モ").to_a
-#   ya = ("ヤ".."ヨ").to_a
-#   ra = ("ラ".."ロ").to_a
-#   wa = ("ワ".."ン").to_a
+def phone_book(names)
+  a = ("ア".."オ").to_a
+  ka = ("カ".."ゴ").to_a
+  sa = ("サ".."ゾ").to_a
+  ta = ("タ".."ド").to_a
+  na = ("ナ".."ノ").to_a
+  ha = ("ハ".."ポ").to_a
+  ma = ("マ".."モ").to_a
+  ya = ("ヤ".."ヨ").to_a
+  ra = ("ラ".."ロ").to_a
+  wa = ("ワ".."ン").to_a
 
-#   num = 0
-#   number_of_names = names.length - 1
-#   array = [['ア'],['カ'],['サ'],['タ'],['ナ'],['ハ'],['マ'],['ヤ'],['ラ'],['ワ']]
+  num = 0
+  number_of_names = names.length - 1
+  array = []
+
+  a_row = ['ア', []]
+  ka_row = ['カ', []]
+  sa_row = ['サ', []]
+  ta_row = ['タ', []]
+  na_row = ['ナ', []]
+  ha_row = ['ハ', []]
+  ma_row = ['マ', []]
+  ya_row = ['ヤ', []]
+  ra_row = ['ラ', []]
+  wa_row = ['ワ', []]
   
-#   while num <= number_of_names
-#     first_character = names.slice(num).slice(0)
-#     if a.include?(first_character)
-#       array[0].insert(1,[names[num]])
-#     elsif ka.include?(first_character)
-#       array[1].insert(1,[names[num]])
-#     elsif sa.include?(first_character)
-#       array[2].insert(1,[names[num]])
-#     elsif ta.include?(first_character)
-#       array[3].insert(1,[names[num]])
-#     elsif na.include?(first_character)
-#       array[4].insert(1,[names[num]])
-#     elsif ha.include?(first_character)
-#       array[5].insert(1,[names[num]])
-#     elsif ma.include?(first_character)
-#       array[6].insert(1,[names[num]])
-#     elsif ya.include?(first_character)
-#       array[7].insert(1,[names[num]])
-#     elsif ra.include?(first_character)
-#       array[8].insert(1,[names[num]])
-#     elsif wa.include?(first_character)
-#       array[9].insert(1,[names[num]])
-#     end
-#     num += 1
-#   end
-    
-#   9.times do |count|
-#     array.delete_if{|i| i.length < 2}
-#   end
-#   p array
-#   p array[1]
-# end
+  while num <= number_of_names
+    first_character = names.slice(num).slice(0)
+    if a.include?(first_character)
+      a_row[1].insert(0,names[num])
+    elsif ka.include?(first_character)
+      ka_row[1].insert(0,names[num])
+    elsif sa.include?(first_character)
+      sa_row[1].insert(0,names[num])
+    elsif ta.include?(first_character)
+      ta_row[1].insert(0,names[num])
+    elsif na.include?(first_character)
+      na_row[1].insert(0,names[num])
+    elsif ha.include?(first_character)
+      ha_row[1].insert(0,names[num])
+    elsif ma.include?(first_character)
+      ma_row[1].insert(0,names[num])
+    elsif ya.include?(first_character)
+      ya_row[1].insert(0,names[num])
+    elsif ra.include?(first_character)
+      ra_row[1].insert(0,names[num])
+    elsif wa.include?(first_character)
+      wa_row[1].insert(0,names[num])
+    end
+    num += 1
+  end
 
-# names = ['キシモト', 'イトウ', 'ババ', 'カネダ', 'ワダ', 'ハマダ']
-# phone_book(names)
+  if a_row[1][0] != nil
+    array << a_row
+  end
+  if ka_row[1][0] != nil
+    array << ka_row
+  end
+  if sa_row[1][0] != nil
+    array << sa_row
+  end
+  if ta_row[1][0] != nil
+    array << ta_row
+  end
+  if na_row[1][0] != nil
+    array << na_row
+  end
+  if ha_row[1][0] != nil
+    array << ha_row
+  end
+  if ma_row[1][0] != nil
+    array << ma_row
+  end
+  if ya_row[1][0] != nil
+    array << ya_row
+  end
+  if ra_row[1][0] != nil
+    array << ra_row
+  end
+  if wa_row[1][0] != nil
+    array << wa_row
+  end
+  
+  p array
+  
+end
 
-# names = ['フクダ', 'キムラ', 'タナカ', 'ハシモト', 'オカモト', 'ゴトウ']
-# phone_book(names)
+names = ['キシモト', 'イトウ', 'ババ', 'カネダ', 'ワダ', 'ハマダ']
+phone_book(names)
+
+names = ['フクダ', 'キムラ', 'タナカ', 'ハシモト', 'オカモト', 'ゴトウ']
+phone_book(names)
 
 # names = ["さくら", "うめ", "オオシマ"]
 # phone_book(names)
@@ -110,35 +160,35 @@
 
 #模範解答
 
-def name_index names
-  katakana = [
-    [*'ア'..'オ']<<'ヴ',          # カタカナを行ごとに格納
-    [*'カ'..'ゴ'],
-    [*'サ'..'ゾ'],
-    [*'タ'..'ド'],
-    [*'ナ'..'ノ'],
-    [*'ハ'..'ポ'],
-    [*'マ'..'モ'],
-    [*'ヤ'..'ヨ'],
-    [*'ラ'..'ロ'],
-    [*'ワ'..'ン']
-  ]
+# def name_index names
+#   katakana = [
+#     [*'ア'..'オ']<<'ヴ',          # カタカナを行ごとに格納
+#     [*'カ'..'ゴ'],
+#     [*'サ'..'ゾ'],
+#     [*'タ'..'ド'],
+#     [*'ナ'..'ノ'],
+#     [*'ハ'..'ポ'],
+#     [*'マ'..'モ'],
+#     [*'ヤ'..'ヨ'],
+#     [*'ラ'..'ロ'],
+#     [*'ワ'..'ン']
+#   ]
 
-  names.sort!                     # 名前の配列を辞書順にソート
-  index=[]
-  katakana.each do |gyou|         # 行ごとに名前の先頭がその行に含まれるかを判定
-    names.each do |name|
-      if gyou.include?(name[0])   # 含まれていた場合は、indexに追加
-        if index.empty? || index[-1][0]!=gyou[0]    # 見出しが既に作られているかどうかを判定
-          index << [gyou[0],[]]
-        end
-          index[-1][1]<<name
-      end
-    end
-  end
-  return index
-end
+#   names.sort!                     # 名前の配列を辞書順にソート
+#   index=[]
+#   katakana.each do |gyou|         # 行ごとに名前の先頭がその行に含まれるかを判定
+#     names.each do |name|
+#       if gyou.include?(name[0])   # 含まれていた場合は、indexに追加
+#         if index.empty? || index[-1][0]!=gyou[0]    # 見出しが既に作られているかどうかを判定
+#           index << [gyou[0],[]]
+#         end
+#           index[-1][1]<<name
+#       end
+#     end
+#   end
+#   return index
+# end
 
-names = ['キシモト', 'イトウ', 'ババ', 'カネダ', 'ワダ', 'ハマダ','ゴンダ','ドウモト','ヴィクトル']
-p name_index names
+# names = ['キシモト', 'イトウ', 'ババ', 'カネダ', 'ワダ', 'ハマダ','ゴンダ','ドウモト','ヴィクトル']
+# p name_index names
 # => [["ア", ["イトウ", "ヴィクトル"]], ["カ", ["カネダ", "キシモト", "ゴンダ"]], ["タ", ["ドウモト"]], ["ハ", ["ハマダ", "ババ"]], ["ワ", ["ワダ"]]]
