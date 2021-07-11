@@ -44,33 +44,41 @@ def phone_book(names)
 
   num = 0
   number_of_names = names.length - 1
-  array = []
+  array = [['ア'],['カ'],['サ'],['タ'],['ナ'],['ハ'],['マ'],['ヤ'],['ラ'],['ワ']]
 
   while num <= number_of_names
     first_character = names.slice(num).slice(0)
     if a.include?(first_character)
-      array << ['ア', [names[num]]]
+      array[0].insert(1,[names[num]])
     elsif ka.include?(first_character)
-      array << ['カ', [names[num]]]
+      array[1].insert(1,[names[num]])
     elsif sa.include?(first_character)
-      array << ['サ', [names[num]]]
+      array[2].insert(1,[names[num]])
     elsif ta.include?(first_character)
-      array << ['タ', [names[num]]]
+      array[3].insert(1,[names[num]])
     elsif na.include?(first_character)
-      array << ['ナ', [names[num]]]
+      array[4].insert(1,[names[num]])
     elsif ha.include?(first_character)
-      array << ['ハ', [names[num]]]
+      array[5].insert(1,[names[num]])
     elsif ma.include?(first_character)
-      array << ['マ', [names[num]]]
+      array[6].insert(1,[names[num]])
     elsif ya.include?(first_character)
-      array << ['ヤ', [names[num]]]
+      array[7].insert(1,[names[num]])
     elsif ra.include?(first_character)
-      array << ['ラ', [names[num]]]
+      array[8].insert(1,[names[num]])
     elsif wa.include?(first_character)
-      array << ['ワ', [names[num]]]
+      array[9].insert(1,[names[num]])
     end
     num += 1
   end
+
+  
+  9.times do |count|
+    if array[count].length < 2
+      array[count].delete_at(0)
+    end
+  end
+  
   p array
 end
 
