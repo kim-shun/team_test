@@ -72,11 +72,8 @@ def phone_book(names)
     num += 1
   end
 
-  
   9.times do |count|
-    if array[count].length < 2
-      array[count].delete_at(0)
-    end
+    array.delete_if{|i| i.length < 2}
   end
   
   p array
