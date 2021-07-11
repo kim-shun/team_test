@@ -10,6 +10,8 @@ end
 
 print("料金は", sum, "です")
 
+#料金は150です
+
 puts "\n"
 
 sum = 0
@@ -23,3 +25,5 @@ when "Apple","Lemon","Orange" then
 end
 
 print("料金は", sum, "です")
+
+#料金は150です
