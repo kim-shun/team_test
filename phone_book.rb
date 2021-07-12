@@ -1,50 +1,3 @@
-# def phone_book(names)
-# end
-
-# names = ['キシモト', 'イトウ', 'ババ', 'カネダ', 'ワダ', 'ハマダ']
-# phone_book(names)
-
-# names = ['フクダ', 'キムラ', 'タナカ', 'ハシモト', 'オカモト', 'ゴトウ']
-# phone_book(names)
-
-
-
-# def phone_book(names)
-  # a = ("ア".."オ").to_a
-  # ka = ("カ".."ゴ").to_a
-  # sa = ("サ".."ゾ").to_a
-  # ta = ("タ".."ド").to_a
-  # na = ("ナ".."ノ").to_a
-  # ha = ("ハ".."ポ").to_a
-  # ma = ("マ".."モ").to_a
-  # ya = ("ヤ".."ヨ").to_a
-  # ra = ("ラ".."ロ").to_a
-  # wa = ("ワ".."ン").to_a
-#   slice = names.slice(0).slice(0)
-  
-#   number_of_names = names.length - 1
-#   count = 0
-#   name_array = []
-#   while count <= number_of_names
-#     name = [names[count]]
-#     name_array << name
-#     count += 1
-#   end
-#   p name_array
-#   #puts name_array
-
-#   if ka.include?(slice)
-#     puts "True"
-#   else
-#     puts "False"
-#   end
-# end
-
-
-
-
-
-
 def phone_book(names)
   a = ("ア".."オ").to_a
   ka = ("カ".."ゴ").to_a
@@ -57,16 +10,7 @@ def phone_book(names)
   ra = ("ラ".."ロ").to_a
   wa = ("ワ".."ン").to_a
 
-  a_row = ['ア', []]
-  ka_row = ['カ', []]
-  sa_row = ['サ', []]
-  ta_row = ['タ', []]
-  na_row = ['ナ', []]
-  ha_row = ['ハ', []]
-  ma_row = ['マ', []]
-  ya_row = ['ヤ', []]
-  ra_row = ['ラ', []]
-  wa_row = ['ワ', []]
+  kana_row = 'アカサタナハマヤラワ'.chars.map{|c| [c,[]]}
 
   num = 0
   number_of_names = names.length - 1
@@ -77,32 +21,32 @@ def phone_book(names)
     [a, ka, sa, ta, na, ha, ma, ya, ra, wa].map{|row|
       if row.include?(first_character)
         if row == a
-         a_row[1].insert(0,names[num])
+          kana_row[0][1].insert(0,names[num])
         elsif row == ka
-          ka_row[1].insert(0,names[num])
+          kana_row[1][1].insert(0,names[num])
         elsif row == sa
-          sa_row[1].insert(0,names[num])
+          kana_row[2][1].insert(0,names[num])
         elsif row == ta
-          ta_row[1].insert(0,names[num])
+          kana_row[3][1].insert(0,names[num])
         elsif row == na
-          na_row[1].insert(0,names[num])
+          kana_row[4][1].insert(0,names[num])
         elsif row == ha
-          ha_row[1].insert(0,names[num])
+          kana_row[5][1].insert(0,names[num])
         elsif row == ma
-          ma_row[1].insert(0,names[num])
+          kana_row[6][1].insert(0,names[num])
         elsif row == ya
-          ya_row[1].insert(0,names[num])
+          kana_row[7][1].insert(0,names[num])
         elsif row == ra
-          ra_row[1].insert(0,names[num])
+          kana_row[8][1].insert(0,names[num])
         elsif row == wa
-          wa_row[1].insert(0,names[num])
+          kana_row[9][1].insert(0,names[num])
         end
       end
     }
     num += 1
   end
 
-  [a_row, ka_row, sa_row, ta_row, na_row, ha_row, ma_row, ya_row, ra_row, wa_row].map{ |row_content|
+  kana_row.map{ |row_content|
     if row_content[1][0] != nil
       row_content[1].sort!
       names_array << row_content
@@ -117,13 +61,107 @@ names = ['キシモト', 'イトウ', 'ババ', 'カネダ', 'ワダ', 'ハマ�
 phone_book(names)
 #実行結果 [["ア", ["イトウ"]], ["カ", ["カネダ", "キシモト"]], ["ハ", ["ハマダ", "ババ"]], ["ワ", ["ワダ"]]]
 
-names = ['フクダ', 'キムラ', 'タナカ', 'ハシモト', 'オカモト', 'ゴトウ']
-phone_book(names)
-# 実行結果 [["ア", ["オカモト"]], ["カ", ["キムラ", "ゴトウ"]], ["タ", ["タナカ"]], ["ハ", ["ハシモト", "フクダ"]]]
+# names = ['フクダ', 'キムラ', 'タナカ', 'ハシモト', 'オカモト', 'ゴトウ']
+# phone_book(names)
+# # 実行結果 [["ア", ["オカモト"]], ["カ", ["キムラ", "ゴトウ"]], ["タ", ["タナカ"]], ["ハ", ["ハシモト", "フクダ"]]]
 
-names = ['ワタナベ', 'ヨシダ', 'マツモト', 'ナガタ', 'ドウモト','タチバナ', 'チバ']
-phone_book(names)
-# 実行結果 [["タ", ["タチバナ", "チバ", "ドウモト"]], ["ナ", ["ナガタ"]], ["マ", ["マツモト"]], ["ヤ", ["ヨシダ"]], ["ワ", ["ワタナベ"]]]
+# names = ['ワタナベ', 'ヨシダ', 'マツモト', 'ナガタ', 'ドウモト','タチバナ', 'チバ']
+# phone_book(names)
+# # 実行結果 [["タ", ["タチバナ", "チバ", "ドウモト"]], ["ナ", ["ナガタ"]], ["マ", ["マツモト"]], ["ヤ", ["ヨシダ"]], ["ワ", ["ワタナベ"]]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# def phone_book(names)
+#   a = ("ア".."オ").to_a
+#   ka = ("カ".."ゴ").to_a
+#   sa = ("サ".."ゾ").to_a
+#   ta = ("タ".."ド").to_a
+#   na = ("ナ".."ノ").to_a
+#   ha = ("ハ".."ポ").to_a
+#   ma = ("マ".."モ").to_a
+#   ya = ("ヤ".."ヨ").to_a
+#   ra = ("ラ".."ロ").to_a
+#   wa = ("ワ".."ン").to_a
+
+#   a_row = ['ア', []]
+#   ka_row = ['カ', []]
+#   sa_row = ['サ', []]
+#   ta_row = ['タ', []]
+#   na_row = ['ナ', []]
+#   ha_row = ['ハ', []]
+#   ma_row = ['マ', []]
+#   ya_row = ['ヤ', []]
+#   ra_row = ['ラ', []]
+#   wa_row = ['ワ', []]
+
+#   num = 0
+#   number_of_names = names.length - 1
+#   names_array = []
+
+#   while num <= number_of_names
+#     first_character = names.slice(num).slice(0)
+#     [a, ka, sa, ta, na, ha, ma, ya, ra, wa].map{|row|
+#       if row.include?(first_character)
+#         if row == a
+#          a_row[1].insert(0,names[num])
+#         elsif row == ka
+#           ka_row[1].insert(0,names[num])
+#         elsif row == sa
+#           sa_row[1].insert(0,names[num])
+#         elsif row == ta
+#           ta_row[1].insert(0,names[num])
+#         elsif row == na
+#           na_row[1].insert(0,names[num])
+#         elsif row == ha
+#           ha_row[1].insert(0,names[num])
+#         elsif row == ma
+#           ma_row[1].insert(0,names[num])
+#         elsif row == ya
+#           ya_row[1].insert(0,names[num])
+#         elsif row == ra
+#           ra_row[1].insert(0,names[num])
+#         elsif row == wa
+#           wa_row[1].insert(0,names[num])
+#         end
+#       end
+#     }
+#     num += 1
+#   end
+
+#   [a_row, ka_row, sa_row, ta_row, na_row, ha_row, ma_row, ya_row, ra_row, wa_row].map{ |row_content|
+#     if row_content[1][0] != nil
+#       row_content[1].sort!
+#       names_array << row_content
+#     end
+#   }
+  
+#   p names_array
+  
+# end
+
+# names = ['キシモト', 'イトウ', 'ババ', 'カネダ', 'ワダ', 'ハマダ']
+# phone_book(names)
+# #実行結果 [["ア", ["イトウ"]], ["カ", ["カネダ", "キシモト"]], ["ハ", ["ハマダ", "ババ"]], ["ワ", ["ワダ"]]]
+
+# names = ['フクダ', 'キムラ', 'タナカ', 'ハシモト', 'オカモト', 'ゴトウ']
+# phone_book(names)
+# # 実行結果 [["ア", ["オカモト"]], ["カ", ["キムラ", "ゴトウ"]], ["タ", ["タナカ"]], ["ハ", ["ハシモト", "フクダ"]]]
+
+# names = ['ワタナベ', 'ヨシダ', 'マツモト', 'ナガタ', 'ドウモト','タチバナ', 'チバ']
+# phone_book(names)
+# # 実行結果 [["タ", ["タチバナ", "チバ", "ドウモト"]], ["ナ", ["ナガタ"]], ["マ", ["マツモト"]], ["ヤ", ["ヨシダ"]], ["ワ", ["ワタナベ"]]]
 
 
 #   a = ("ア".."オ").to_a
