@@ -21,25 +21,25 @@ def phone_book(names)
     first_character = names.slice(num).slice(0)
     kana.map{|row|
       if row.include?(first_character)
-        if row == a
+        if row == kana[0]
           kana_row[0][1].insert(0,names[num])
-        elsif row == ka
+        elsif row == kana[1]
           kana_row[1][1].insert(0,names[num])
-        elsif row == sa
+        elsif row == kana[2]
           kana_row[2][1].insert(0,names[num])
-        elsif row == ta
+        elsif row == kana[3]
           kana_row[3][1].insert(0,names[num])
-        elsif row == na
+        elsif row == kana[4]
           kana_row[4][1].insert(0,names[num])
-        elsif row == ha
+        elsif row == kana[5]
           kana_row[5][1].insert(0,names[num])
-        elsif row == ma
+        elsif row == kana[6]
           kana_row[6][1].insert(0,names[num])
-        elsif row == ya
+        elsif row == kana[7]
           kana_row[7][1].insert(0,names[num])
-        elsif row == ra
+        elsif row == kana[8]
           kana_row[8][1].insert(0,names[num])
-        elsif row == wa
+        elsif row == kana[9]
           kana_row[9][1].insert(0,names[num])
         end
       end
