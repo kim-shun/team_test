@@ -10,6 +10,7 @@ def phone_book(names)
   ra = ("ラ".."ロ").to_a
   wa = ("ワ".."ン").to_a
 
+  kana = [a, ka, sa, ta, na, ha, ma, ya, ra, wa]
   kana_row = 'アカサタナハマヤラワ'.chars.map{|c| [c,[]]}
 
   num = 0
@@ -18,7 +19,7 @@ def phone_book(names)
   
   while num <= number_of_names
     first_character = names.slice(num).slice(0)
-    [a, ka, sa, ta, na, ha, ma, ya, ra, wa].map{|row|
+    kana.map{|row|
       if row.include?(first_character)
         if row == a
           kana_row[0][1].insert(0,names[num])
