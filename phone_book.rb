@@ -70,31 +70,31 @@ def phone_book(names)
 
   num = 0
   number_of_names = names.length - 1
-  array = []
+  names_array = []
   
   while num <= number_of_names
     first_character = names.slice(num).slice(0)
-    [a, ka, sa, ta, na, ha, ma, ya, ra, wa].map{|i|
-      if i.include?(first_character)
-        if i == a
+    [a, ka, sa, ta, na, ha, ma, ya, ra, wa].map{|row|
+      if row.include?(first_character)
+        if row == a
          a_row[1].insert(0,names[num])
-        elsif i == ka
+        elsif row == ka
           ka_row[1].insert(0,names[num])
-        elsif i == sa
+        elsif row == sa
           sa_row[1].insert(0,names[num])
-        elsif i == ta
+        elsif row == ta
           ta_row[1].insert(0,names[num])
-        elsif i == na
+        elsif row == na
           na_row[1].insert(0,names[num])
-        elsif i == ha
+        elsif row == ha
           ha_row[1].insert(0,names[num])
-        elsif i == ma
+        elsif row == ma
           ma_row[1].insert(0,names[num])
-        elsif i == ya
+        elsif row == ya
           ya_row[1].insert(0,names[num])
-        elsif i == ra
+        elsif row == ra
           ra_row[1].insert(0,names[num])
-        elsif i == wa
+        elsif row == wa
           wa_row[1].insert(0,names[num])
         end
       end
@@ -102,48 +102,14 @@ def phone_book(names)
     num += 1
   end
 
-  if a_row[1][0] != nil
-    a_row[1].sort!
-    array << a_row
-  end
-  if ka_row[1][0] != nil
-    ka_row[1].sort!
-    array << ka_row
-  end
-  if sa_row[1][0] != nil
-    sa_row[1].sort!
-    array << sa_row
-  end
-  if ta_row[1][0] != nil
-    ta_row[1].sort!
-    array << ta_row
-  end
-  if na_row[1][0] != nil
-    na_row[1].sort!
-    array << na_row
-  end
-  if ha_row[1][0] != nil
-    ha_row[1].sort!
-    array << ha_row
-  end
-  if ma_row[1][0] != nil
-    ma_row[1].sort!
-    array << ma_row
-  end
-  if ya_row[1][0] != nil
-    ya_row[1].sort!
-    array << ya_row
-  end
-  if ra_row[1][0] != nil
-    ra_row[1].sort!
-    array << ra_row
-  end
-  if wa_row[1][0] != nil
-    wa_row[1].sort!
-    array << wa_row
-  end
+  [a_row, ka_row, sa_row, ta_row, na_row, ha_row, ma_row, ya_row, ra_row, wa_row].map{ |row_content|
+    if row_content[1][0] != nil
+      row_content[1].sort!
+      names_array << row_content
+    end
+  }
   
-  p array
+  p names_array
   
 end
 
