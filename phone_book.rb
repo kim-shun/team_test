@@ -94,33 +94,43 @@ def phone_book(names)
   end
 
   if a_row[1][0] != nil
+    a_row[1].sort!
     array << a_row
   end
   if ka_row[1][0] != nil
+    ka_row[1].sort!
     array << ka_row
   end
   if sa_row[1][0] != nil
+    sa_row[1].sort!
     array << sa_row
   end
   if ta_row[1][0] != nil
+    ta_row[1].sort!
     array << ta_row
   end
   if na_row[1][0] != nil
+    na_row[1].sort!
     array << na_row
   end
   if ha_row[1][0] != nil
+    ha_row[1].sort!
     array << ha_row
   end
   if ma_row[1][0] != nil
+    ma_row[1].sort!
     array << ma_row
   end
   if ya_row[1][0] != nil
+    ya_row[1].sort!
     array << ya_row
   end
   if ra_row[1][0] != nil
+    ra_row[1].sort!
     array << ra_row
   end
   if wa_row[1][0] != nil
+    wa_row[1].sort!
     array << wa_row
   end
   
@@ -130,8 +140,9 @@ end
 
 names = ['キシモト', 'イトウ', 'ババ', 'カネダ', 'ワダ', 'ハマダ']
 phone_book(names)
-
 names = ['フクダ', 'キムラ', 'タナカ', 'ハシモト', 'オカモト', 'ゴトウ']
+phone_book(names)
+names = ['ワタナベ', 'ヨシダ', 'マツモト', 'ナガタ', 'ドウモト','タチバナ', 'チバ']
 phone_book(names)
 
 # names = ["さくら", "うめ", "オオシマ"]
