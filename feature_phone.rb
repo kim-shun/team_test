@@ -1,3 +1,11 @@
+def feature_phone(input)
+  input1 = [".", ",", "!", "?", " "]
+  if input.include?(1)
+end
+
+puts "数字を入力してください"
+input = gets.to_i
+feature_phone(input)
 
 # input
 # 5
