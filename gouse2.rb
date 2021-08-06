@@ -25,13 +25,13 @@
 #   puts num
 # end
 
-# count = 1
-# sum = 0
-# while count <= 40
-#   sum += count**4
-#   count += 1
-# end
-# puts sum
+count = 1
+sum = 0
+while count <= 40
+  sum += count**4
+  count += 1
+end
+puts sum
 
 # sum = 0
 # 1.upto(40) do |count|
@@ -39,7 +39,7 @@
 # end
 # puts sum
 
-puts (1..40).sum {|count| count**4}
+#puts (1..40).sum {|count| count**4}
 
 # n = 40
 # puts n * (n + 1) * (2 * n + 1) * (3 * n**2 + 3 * n - 1) / 30
