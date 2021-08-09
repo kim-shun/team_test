@@ -17,6 +17,7 @@ def withdraw(balance, amount)
   else
     puts "残高不足です"
   end
+end
 
 balance = 100000
 puts "いくら引き落としますか？（手数料110円かかります）"
